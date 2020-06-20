@@ -14,7 +14,6 @@ function App() {
   }, [])
 
   async function handleAddRepository() {
-    // TODO
     const response = await api.post('repositories', {
       title: `Repositório: ${Date.now()}`,
       url: "github.com/r33-code/desafio-conceitos-reactjs",
@@ -33,7 +32,6 @@ function App() {
 
   async function handleRemoveRepository(id) {
 
-    // TODO
     await api.delete(`repositories/${id}`).then(() => {
       const repository = repositories.find(repository => repository.id === id)
       const newRepositories = [ ...repositories ]
